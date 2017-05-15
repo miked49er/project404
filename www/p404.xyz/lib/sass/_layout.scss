@@ -1,0 +1,31 @@
+// Susy setup ------------------------------------------------------------------
+$total-columns     : 12;
+$column-width      : 4em;
+$gutter-width      : 1em;
+$grid-padding      : $gutter-width;
+
+$susy: (
+  columns: 12,
+  gutter: .25,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
+@include layout($susy);
+@include border-box-sizing;
+
+$small             : 25em;
+$medium            : 39em;
+$large             : 56em;
+
+body {
+  @include container;
+}
+
+.hide {
+  display: none !important;
+} // hide
+
+.active {
+  display: block !important;
+} // active
