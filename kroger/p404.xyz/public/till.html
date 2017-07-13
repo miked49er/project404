@@ -1,0 +1,55 @@
+{{ define "content" }}
+
+	<div class="col">
+		<div class="col-sm">
+			<form action="/count" method="post">
+			
+				<fieldset>
+					<legend>Coins</legend>
+					{{range .Coins}}
+						<div class="input-group fluid">
+							<label>{{.Label}}</label>
+							<input placeholder="Loose" name="{{.Loose}}" id="{{.Loose}}" type="number" min="0" step="any"/>
+							<input placeholder="Rolled" name="{{.Rolled}}" id="{{.Rolled}}" type="number" min="0" step="any"/>
+						</div>
+					{{end}}
+					<div class="input-group fluid">
+						<label for="other">Other Coins</label>
+						<input type="number" name="other" id="other" min="0" step="any"/>
+					</div> <!-- input-group fluid -->
+				</fieldset>
+				
+				<fieldset>
+					<legend>Bills</legend>
+					{{range .Bills}}
+						<div class="input-group fluid">
+							<label>{{.Label}}</label>
+							<input name="{{.Name}}" id="{{.Name}}" type="number" min="0"/>
+						</div>
+					{{end}}
+				</fieldset>
+
+				<fieldset>
+					<legend>Other Till Info</legend>
+					<div class="input-group fluid">
+						<label for="otherDrops">Other Drops</label>
+						<input placeholder="Total Drops from Drop Log" type="number" name="otherDrops" id="otherDrops" min="0"/>
+					</div> <!-- input-group fluid -->
+
+					<div class="input-group fluid">
+						<label for="currentTill">Current Till</label>
+						<input type="number" name="currentTill" id="currentTill" min="0" step="any"/>
+					</div> <!-- input-group fluid -->
+	
+					<div class="input-group fluid">
+						<label for="previousTill">Previous Till</label>
+						<input type="number" name="previousTill" id="previousTill" min="0" step="any"/>
+					</div> <!-- input-group fluid -->
+				</fieldset>
+					
+				<button type="submit" class="primary circular" style="position: fixed; bottom: 3vh; right: 3vw; height:50px; width:50px; font-size: 25px; line-height: 1;"><img src="/img/ic_check_circle_48px.svg"/></button>
+ 			</form>
+		</div> <!-- col-sm -->
+	</div> <!-- col -->
+
+{{ end }}

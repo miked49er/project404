@@ -1,0 +1,29 @@
+{{ define "content" }}
+
+
+	<div class="row">
+		<div class="col-sm">
+			<h3>Lottery Count</h3>
+			<table class="preset">
+				<caption>Total On Hand: {{ .Total }}</caption>
+				<thead>
+					<tr>
+						<th>Slot #</th>
+						<th>Ticket Value</th>
+						<th>Ticket #</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{ range .Slots }}
+					<tr>
+						<td data-label="Slot #">{{ .Slot }}</td>
+						<td data-label="Ticket Value">$ {{ .Value }}</td>
+						<td data-label="Ticket #">{{ .Ticket }}</td>
+					</tr>
+					{{ end }}
+				</tbody>
+			</table>
+		</div> <!-- col-sm -->
+	</div> <!-- row -->
+
+{{ end }}

@@ -1,0 +1,75 @@
+{{ define "content" }}
+	<div class="col">
+		<div class="card fluid" style="margin-bottom:20px">
+			<div class="section dark">
+				<h2><small>Totals</small></h2>
+			</div> <!-- section dark -->
+			<div class="section">
+				<p><strong>SubTotal</strong> $ {{.SubTotal}}</p>
+				<p><strong>Final Drop</strong> $ {{.Final}}</p>
+				<p><strong>Other Drops</strong> $ {{.OtherDrops}}</p>
+				<p><strong>Total</strong> $ {{.Total}}</p>
+				<p><strong>Current Till</strong> $ {{.CurrentTill}}</p>
+				<p><strong>Previous Till</strong> $ {{.PreviousTill}}</p>
+				<p><strong>Accountable For</strong> $ {{.Accountable}}</p>
+				<p><strong>Over/Under</strong> $ {{.Over}}</p>
+			</div> <!-- section -->
+		</div> <!-- card fluid -->
+
+		<div class="card fluid" style="margin-bottom:20px">
+			<div class="section dark">
+				<h2><small>Drop Amounts</small></h2>
+			</div> <!-- section dark -->
+			<div class="section">
+				{{range .Drop}}
+					<p><strong>{{.Label}}</strong> $ {{.Value}}</p>
+				{{end}}
+			</div> <!-- section -->
+		</div> <!-- card fluid -->
+
+		<div class="card fluid" style="margin-bottom:20px">
+			<div class="section dark">
+				<h2><small>Next Till</small></h2>
+			</div> <!-- section dark -->
+			<div class="section">
+				<h3><small>Coins</small></h3>
+				<table class="preset">
+					<thead>
+						<tr>
+							<th>Coin</th>
+							<th>Loose</th>
+							<th>Rolled</th>
+						</tr>
+					</thead>
+					<tbody>
+						{{range .Coins}}
+						<tr>
+							<td>{{ .Label }}</td>
+							<td>$ {{ .Loose }}</td>
+							<td>$ {{ .Rolled }}</td>
+						</tr>
+						{{end}}
+						<tr>
+							<td>Other Coins</td>
+							<td>$ {{ .OtherCoins }}</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<p><strong>Coin Total</strong> $ {{.CoinTotal}}</p>
+			</div> <!-- section -->
+	
+			<div class="section">
+				<h3><small>Bills</small></h3>
+				{{range .Bills}}
+					<p><strong>{{.Label}}</strong> $ {{.Value}}</p>
+				{{end}}
+			</div> <!-- section -->
+			<div class="section">
+				<h3><small>Total</small></p>
+				<p>$ {{.NextTotal}}</p>
+			</div> <!-- section -->
+		</div> <!-- card fluid -->
+	</div> <!-- col -->
+
+{{ end }}

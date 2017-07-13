@@ -1,0 +1,41 @@
+{{ define "layout" }}
+<html> 
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width">
+	<title>Project 404 Till</title>
+	<link href="/css/mini-default.min.css" rel="stylesheet" />
+</head> 
+<body>
+	
+	<header class="sticky">
+		<label for="drawer-checkbox" class="button drawer-toggle"></label>
+		<a href="#" class="logo">Project 404</a>
+	</header>
+	
+	<input type="checkbox" id="drawer-checkbox">
+	<div class="drawer"  style="outline:none; border:none; background-color: #fff;">
+		<label for="drawer-checkbox" class="close"></label>
+		<div class="card fluid" style="margin:0;">
+			<div class="section media">
+				<div style="width:100%; height: 100%; background-image: url(/img/skyline-long-red.jpg); background-size: cover; background-repeat: no-repeat;"></div>
+			</div>
+			<div class="section">
+				<a href="/" style="margin-left: 1rem;">Till</a>
+			</div>
+			<div class="section">
+				<a href="/lottery" style="margin-left: 1rem;">Lottery</a>
+			</div>
+			<div class="section">
+				<a href="/about" style="margin-left: 1rem;">About</a>
+			</div>
+		</div>
+	</div> <!-- drawer -->
+
+	<div class="container" style="margin-top:25px; margin-bottom:50px">
+		{{ template "content" . }}
+	</div> <!-- container -->
+
+</body> 
+</html>
+{{ end }}

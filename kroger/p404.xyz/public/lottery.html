@@ -1,0 +1,30 @@
+{{ define "content" }}
+
+	<div class="row">
+		<div class="col-sm">
+			<h3>Lottery Count</h3>
+			<form action="/totals" method="post">
+				<table>
+					<thead>
+						<tr>
+							<th>Slot #</th>
+							<th>Ticket Value</th>
+							<th>Ticket Number</th>
+						</tr>
+					</thead>
+					<tbody>
+						{{ range $index, $value := . }}
+						<tr>
+							<td data-label="Slot #">{{ $value }}</td>
+							<td data-label="Ticket Value"><input placeholder="Dollar Value" type="number" min="0" name="value{{ $value }}" id="value{{ $value }}"/></td>
+							<td data-label="Ticket #"><input placeholder="Ticket Number" type="number" min="0" name="slot{{ $value }}" id="slot{{ $value }}"/></td>
+						</tr>
+						{{ end }}
+					</tbody>
+				</table>
+				<button type="submit" class="primary circular" style="position: fixed; bottom: 3vh; right: 3vw; height:50px; width:50px; font-size: 25px; line-height: 1;">&#65291;</button>
+			</form>
+		</div> <!-- col-sm -->
+	</div> <!-- row -->
+
+{{ end }}
