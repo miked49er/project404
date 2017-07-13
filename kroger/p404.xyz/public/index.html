@@ -1,0 +1,91 @@
+<html> 
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Kroger Till</title>
+</head> 
+<body> 
+<form action="/count" method="post">
+	<table class="coins">
+		<tr>
+			<td></td>
+			<td><label>Loose</label></td>
+			<td><label>Rolled</label></td>
+		</tr>
+		
+			<tr>
+				<td><label>Pennies</label>
+				<td><input name="pennies" id="pennies" type="number" min="0" step="any"/></td>
+				<td><input name="pennyRoll" id="pennyRoll" type="number" min="0" step="any"/></td>
+			</tr>
+		
+			<tr>
+				<td><label>Nickels</label>
+				<td><input name="nickels" id="nickels" type="number" min="0" step="any"/></td>
+				<td><input name="nickelRoll" id="nickelRoll" type="number" min="0" step="any"/></td>
+			</tr>
+		
+			<tr>
+				<td><label>Dimes</label>
+				<td><input name="dimes" id="dimes" type="number" min="0" step="any"/></td>
+				<td><input name="dimeRoll" id="dimeRoll" type="number" min="0" step="any"/></td>
+			</tr>
+		
+			<tr>
+				<td><label>Quarter</label>
+				<td><input name="quarters" id="quarters" type="number" min="0" step="any"/></td>
+				<td><input name="quarterRoll" id="quarterRoll" type="number" min="0" step="any"/></td>
+			</tr>
+		
+		<tr>
+			<td><label>Other Coins</labels></td>
+			<td><input type="text" name="other" id="other" min="0" step="any"/></td>
+		</tr>
+	</table>
+	
+	<table class="bills">
+		
+			<tr>
+				<td><label>Ones</label></td>
+				<td><input name="ones" id="ones" type="number" min="0"/></td>
+			</tr>
+		
+			<tr>
+				<td><label>Five</label></td>
+				<td><input name="fives" id="fives" type="number" min="0"/></td>
+			</tr>
+		
+			<tr>
+				<td><label>Tens</label></td>
+				<td><input name="tens" id="tens" type="number" min="0"/></td>
+			</tr>
+		
+			<tr>
+				<td><label>Twenties</label></td>
+				<td><input name="twenties" id="twenties" type="number" min="0"/></td>
+			</tr>
+		
+			<tr>
+				<td><label>Fifties</label></td>
+				<td><input name="fifties" id="fifties" type="number" min="0"/></td>
+			</tr>
+		
+			<tr>
+				<td><label>Hundreds</label></td>
+				<td><input name="hundreds" id="hundreds" type="number" min="0"/></td>
+			</tr>
+		
+	</table>
+
+	<label for="otherDrops">Other Drops (Total of all drops 
+other than the final drop)</label><br>
+	<input type="number" name="otherDrops" id="otherDrops" min="0"/><br>	
+
+	<label for="currentTill">Current Till</label><br>
+	<input type="text" name="currentTill" id="currentTill" min="0" step="any"/><br>
+	
+	<label for="previousTill">Previous Till</label><br>
+	<input type="text" name="previousTill" id="previousTill" min="0" step="any"/><br>
+	<input type="submit" value="GO"/>
+ </form> 
+</body> 
+</html>
