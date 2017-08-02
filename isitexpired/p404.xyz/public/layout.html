@@ -1,0 +1,22 @@
+{{ define "layout" }}
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width">
+	<title>Project 404 Till</title>
+	<link href="/css/mini-default.min.css" rel="stylesheet" />
+</head>
+<body>
+
+	<header class="sticky">
+		<a href="/" class="logo">Is It Expired?</a>
+		<a href="date-code" class="button">Date Code</a>
+		<span>|</span>
+		<a href="about" class="button">About</a>
+	</header>
+
+	{{ template "content" . }}
+
+</body>
+</html>
+{{ end }}

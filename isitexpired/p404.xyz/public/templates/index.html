@@ -1,0 +1,35 @@
+{{ define "content" }}
+<div class="container hidden-lg" style="margin-top:25px; margin-bottom:50px">
+  <div class="row">
+    {{ range .Brands }}
+      <div class="card fluid" style="margin:auto; margin-bottom:30px">
+        <div class="section dark" style="text-align:center">
+          <h1>{{ .Brand }}</h1>
+        </div> <!-- section dark -->
+        <div class="section" style="text-align:center">
+          <h2>{{ .Pull }} <small>Will Expire On</small> {{ .Expiration }}</h2>
+        </div>
+      </div> <!-- card fluid -->
+    {{ end }}
+  </div> <!-- row -->
+</div> <!-- container -->
+
+<div class="container hidden-sm hidden-md" style="height: calc(100vh - 4rem); margin-top:25px">
+  <div class="row">
+    {{ range .Brands }}
+      <div class="card fluid" style="margin:auto; margin-bottom:30px">
+        <div class="section dark" style="text-align:center">
+          <h1>{{ .Brand }}</h1>
+        </div> <!-- section dark -->
+        <div class="section" style="text-align:center">
+          <h2>{{ .Pull }} <small>Will Expire On</small> {{ .Expiration }}</h2>
+        </div>
+      </div> <!-- card fluid -->
+    {{ end }}
+  </div> <!-- row -->
+</div> <!-- container -->
+
+<footer class="sticky" style="padding:10px 8px;">
+  <h3 style="text-align:center">{{ .Date }}<small>Today</small></h3>
+</footer>
+{{ end }}

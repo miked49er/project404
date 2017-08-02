@@ -1,0 +1,356 @@
+{{ define "content" }}
+
+<div class="tabs stacked">
+	<style>
+		.month {
+			margin: 20px auto;
+		}
+	</style>
+
+	<input type="checkbox" id="grizzly" aria-hidden="true">
+	<label style="text-align:center" for="grizzly" aria-hidden="true">Kodiak | Cougar | Hawken | Grizzly</label>
+	<div style="align-items:center">
+		<div class="inline-block">
+			<h2>Kodiak | Cougar | Hawken | Grizzly</h2>
+			<mark class="inline-block">Product Expires 5 Months After Manufacture's Code Date</mark>
+			<p><strong>Location:</strong> Bottom of can</p>
+			<p><strong>Second to last character:</strong> Month manufactured</p>
+			<p><strong>Last character:</strong> Year manufactured</p>
+			<p><strong>Example:</strong> T006428A7 = January 2017</p>
+		</div>
+
+		<div class="row">
+			<table class="preset month">
+				<thead>
+					<tr>
+						<th>Month</th>
+						<th>Code</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Jan</td>
+						<td>A</td>
+					</tr>
+					<tr>
+						<td>Feb</td>
+						<td>B</td>
+					</tr>
+					<tr>
+						<td>Mar</td>
+						<td>C</td>
+					</tr>
+					<tr>
+						<td>Apr</td>
+						<td>D</td>
+					</tr>
+					<tr>
+						<td>May</td>
+						<td>E</td>
+					</tr>
+					<tr>
+						<td>Jun</td>
+						<td>F</td>
+					</tr>
+					<tr>
+						<td>Jul</td>
+						<td>G</td>
+					</tr>
+					<tr>
+						<td>Aug</td>
+						<td>H</td>
+					</tr>
+					<tr>
+						<td>Sep</td>
+						<td>J</td>
+					</tr>
+					<tr>
+						<td>Oct</td>
+						<td>K</td>
+					</tr>
+					<tr>
+						<td>Nov</td>
+						<td>L</td>
+					</tr>
+					<tr>
+						<td>Dec</td>
+						<td>M</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table class="preset month">
+				<thead>
+					<tr>
+						<th>Month</th>
+						<th>Code to Pull</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Jan - 17</td>
+						<td>H6</td>
+					</tr>
+					<tr>
+						<td>Feb - 17</td>
+						<td>J6</td>
+					</tr>
+					<tr>
+						<td>Mar - 17</td>
+						<td>K6</td>
+					</tr>
+					<tr>
+						<td>Apr - 17</td>
+						<td>L6</td>
+					</tr>
+					<tr>
+						<td>May - 17</td>
+						<td>M6</td>
+					</tr>
+					<tr>
+						<td>Jun - 17</td>
+						<td>A7</td>
+					</tr>
+					<tr>
+						<td>Jul - 17</td>
+						<td>B7</td>
+					</tr>
+					<tr>
+						<td>Aug - 17</td>
+						<td>C7</td>
+					</tr>
+					<tr>
+						<td>Sep - 17</td>
+						<td>D7</td>
+					</tr>
+					<tr>
+						<td>Oct - 17</td>
+						<td>E7</td>
+					</tr>
+					<tr>
+						<td>Nov - 17</td>
+						<td>F7</td>
+					</tr>
+					<tr>
+						<td>Dec - 17</td>
+						<td>G7</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<input type="checkbox" id="camel" aria-hidden="true">
+	<label style="text-align:center" for="camel" aria-hidden="true">CAMEL SNUS | VUSE</label>
+	<div>
+		<h2>CAMEL SNUS | VUSE</h2>
+		<mark class="inline-block">Expires 12 Months After Manufacturing Code Date</mark>
+		<p><strong>Location:</strong> Bottom of can</p>
+		<p><strong>Second to last character:</strong> Month manufactured</p>
+		<p><strong>Last character:</strong> Year manufactured</p>
+		<p><strong>Example:</strong> R001AAA7 = January 2017</p>
+
+		<div class="row">
+			<table class="preset month">
+				<thead>
+					<tr>
+						<th>Month</th>
+						<th>Code</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Jan</td>
+						<td>A</td>
+					</tr>
+					<tr>
+						<td>Feb</td>
+						<td>B</td>
+					</tr>
+					<tr>
+						<td>Mar</td>
+						<td>C</td>
+					</tr>
+					<tr>
+						<td>Apr</td>
+						<td>D</td>
+					</tr>
+					<tr>
+						<td>May</td>
+						<td>E</td>
+					</tr>
+					<tr>
+						<td>Jun</td>
+						<td>F</td>
+					</tr>
+					<tr>
+						<td>Jul</td>
+						<td>G</td>
+					</tr>
+					<tr>
+						<td>Aug</td>
+						<td>H</td>
+					</tr>
+					<tr>
+						<td>Sep</td>
+						<td>J</td>
+					</tr>
+					<tr>
+						<td>Oct</td>
+						<td>K</td>
+					</tr>
+					<tr>
+						<td>Nov</td>
+						<td>L</td>
+					</tr>
+					<tr>
+						<td>Dec</td>
+						<td>M</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table class="preset month">
+				<thead>
+					<tr>
+						<th>Month</th>
+						<th>Code to Pull</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Jan - 17</td>
+						<td>A6</td>
+					</tr>
+					<tr>
+						<td>Feb - 17</td>
+						<td>B6</td>
+					</tr>
+					<tr>
+						<td>Mar - 17</td>
+						<td>C6</td>
+					</tr>
+					<tr>
+						<td>Apr - 17</td>
+						<td>D6</td>
+					</tr>
+					<tr>
+						<td>May - 17</td>
+						<td>E6</td>
+					</tr>
+					<tr>
+						<td>Jun - 17</td>
+						<td>F6</td>
+					</tr>
+					<tr>
+						<td>Jul - 17</td>
+						<td>G6</td>
+					</tr>
+					<tr>
+						<td>Aug - 17</td>
+						<td>H6</td>
+					</tr>
+					<tr>
+						<td>Sep - 17</td>
+						<td>J6</td>
+					</tr>
+					<tr>
+						<td>Oct - 17</td>
+						<td>K6</td>
+					</tr>
+					<tr>
+						<td>Nov - 17</td>
+						<td>L6</td>
+					</tr>
+					<tr>
+						<td>Dec - 17</td>
+						<td>M6</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<input type="checkbox" id="longhorn" aria-hidden="true">
+	<label style="text-align:center" for="longhorn" aria-hidden="true">Timber Wolf | Longhorn</label>
+	<div>
+		<h2>Timber Wolf | Longhorn</h2>
+		<mark class="inline-block">Expiration Date on Product</mark>
+		<p><strong>Location:</strong> Bottom of can</p>
+		<p><strong>First character:</strong> Month</p>
+		<p><strong>Second and Third character:</strong> Day</p>
+		<p><strong>Last character:</strong> Year</p>
+		<p><strong>Example:</strong> A017C0928 = Jan 1, 2017</p>
+
+		<table class="preset month">
+			<thead>
+				<tr>
+					<th>Month</th>
+					<th>Code</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Jan</td>
+					<td>A</td>
+				</tr>
+				<tr>
+					<td>Feb</td>
+					<td>B</td>
+				</tr>
+				<tr>
+					<td>Mar</td>
+					<td>C</td>
+				</tr>
+				<tr>
+					<td>Apr</td>
+					<td>D</td>
+				</tr>
+				<tr>
+					<td>May</td>
+					<td>E</td>
+				</tr>
+				<tr>
+					<td>Jun</td>
+					<td>F</td>
+				</tr>
+				<tr>
+					<td>Jul</td>
+					<td>G</td>
+				</tr>
+				<tr>
+					<td>Aug</td>
+					<td>H</td>
+				</tr>
+				<tr>
+					<td>Sep</td>
+					<td>I</td>
+				</tr>
+				<tr>
+					<td>Oct</td>
+					<td>J</td>
+				</tr>
+				<tr>
+					<td>Nov</td>
+					<td>K</td>
+				</tr>
+				<tr>
+					<td>Dec</td>
+					<td>L</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<input type="checkbox" id="skoal" aria-hidden="true">
+	<label style="text-align:center" for="skoal" aria-hidden="true">Copenhagen | Skoal</label>
+	<div>
+		<h2>Copenhagen | Skoal</h2>
+		<mark class="inline-block">Expiration Date on Product</mark>
+		<p><strong>Location:</strong> Back of Can</p>
+		<p><strong>Example:</strong> Jan 01 2017</p>
+	</div>
+
+</div> <!-- tabs stacked -->
+
+{{ end }}
